@@ -1,9 +1,9 @@
 import { APP_URL, AUTHOR, IMAGES, SEO, THEME_COLOR } from "@/lib/config";
 import { LocaleProvider } from "@/lib/i18n";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -117,6 +117,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LocaleProvider>{children}</LocaleProvider>
+        <Analytics />
       </body>
     </html>
   );
