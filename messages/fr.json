@@ -1,0 +1,211 @@
+{
+  "hero": {
+    "badge": "Outil gratuit et professionnel",
+    "title": "Générateur de",
+    "titleHighlight": "Diagrammes de Gantt",
+    "subtitle": "Créez des plannings visuels professionnels en quelques secondes. Gérez vos projets avec des dépendances, des groupes et exportez en image.",
+    "features": {
+      "json": {
+        "title": "Configuration JSON",
+        "description": "Format simple et intuitif pour définir vos tâches et leurs relations"
+      },
+      "dependencies": {
+        "title": "Dépendances visuelles",
+        "description": "Visualisez les relations entre tâches avec des flèches colorées"
+      },
+      "export": {
+        "title": "Export en image",
+        "description": "Téléchargez vos diagrammes en haute qualité pour vos présentations"
+      }
+    }
+  },
+  "tool": {
+    "title": "Commencez dès maintenant",
+    "subtitle": "Entrez votre configuration JSON et générez votre diagramme de Gantt en un clic",
+    "jsonEditor": {
+      "title": "Configuration JSON",
+      "placeholder": "Entrez votre JSON ici...",
+      "generateButton": "Générer le Gantt"
+    },
+    "documentation": {
+      "title": "Format de données",
+      "steps": {
+        "key": {
+          "title": "Clé unique (key)",
+          "description": "Identifiant numérique unique pour chaque tâche"
+        },
+        "dates": {
+          "title": "Dates (start_date, end_date)",
+          "description": "Format ISO 8601 : YYYY-MM-DD"
+        },
+        "group": {
+          "title": "Groupe (optionnel)",
+          "description": "Regroupe visuellement les tâches liées"
+        },
+        "depends": {
+          "title": "Dépendances (optionnel)",
+          "description": "Tableau des clés des tâches dont dépend cette tâche"
+        }
+      }
+    },
+    "ganttDisplay": {
+      "title": "Votre Diagramme de Gantt",
+      "exportButton": "Exporter PNG"
+    },
+    "errors": {
+      "invalidArray": "Le JSON doit être un tableau de tâches",
+      "invalidJson": "JSON invalide : ",
+      "exportError": "Erreur lors de l'export de l'image"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "Gantt Generator",
+      "description": "Outil gratuit et open-source pour créer des diagrammes de Gantt professionnels. Parfait pour la gestion de projets et la planification d'équipe."
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "items": {
+        "json": "Configuration JSON simple",
+        "dependencies": "Gestion des dépendances",
+        "export": "Export en haute qualité",
+        "interface": "Interface intuitive"
+      }
+    },
+    "tech": {
+      "title": "Technologies"
+    },
+    "copyright": "Gantt Generator. Créé avec ❤️ par Alexys LAURENT."
+  },
+  "dependencyModes": {
+    "hidden": {
+      "title": "Masqué",
+      "description": "Aucune dépendance affichée"
+    },
+    "hover": {
+      "title": "Survol",
+      "description": "Voir au survol de la souris"
+    },
+    "click": {
+      "title": "Clic",
+      "description": "Cliquer pour afficher/masquer"
+    },
+    "all": {
+      "title": "Tout",
+      "description": "Toutes les dépendances affichées"
+    }
+  },
+  "defaultExample": [
+    {
+      "key": 1,
+      "name": "Analyse des besoins",
+      "start_date": "2025-09-01",
+      "end_date": "2025-09-30",
+      "group": "Planification & Conception"
+    },
+    {
+      "key": 2,
+      "name": "Maquettes UI/UX",
+      "start_date": "2025-10-01",
+      "end_date": "2025-10-31",
+      "group": "Planification & Conception",
+      "depends": [1]
+    },
+    {
+      "key": 3,
+      "name": "Développer pages produits",
+      "start_date": "2025-11-01",
+      "end_date": "2025-11-30",
+      "group": "Frontend",
+      "depends": [2]
+    },
+    {
+      "key": 4,
+      "name": "Développer panier d'achat",
+      "start_date": "2025-12-01",
+      "end_date": "2025-12-31",
+      "group": "Frontend",
+      "depends": [3]
+    },
+    {
+      "key": 5,
+      "name": "Développer interface utilisateur",
+      "start_date": "2026-01-01",
+      "end_date": "2026-01-31",
+      "group": "Frontend",
+      "depends": [4]
+    },
+    {
+      "key": 6,
+      "name": "Développer module de login",
+      "start_date": "2025-10-01",
+      "end_date": "2025-10-31",
+      "group": "Backend",
+      "depends": [1]
+    },
+    {
+      "key": 7,
+      "name": "Développer API produits",
+      "start_date": "2025-12-01",
+      "end_date": "2025-12-31",
+      "group": "Backend",
+      "depends": [6, 11]
+    },
+    {
+      "key": 8,
+      "name": "Développer système de paiement",
+      "start_date": "2026-01-01",
+      "end_date": "2026-01-31",
+      "group": "Backend",
+      "depends": [7]
+    },
+    {
+      "key": 9,
+      "name": "Développer gestion des commandes",
+      "start_date": "2026-02-01",
+      "end_date": "2026-02-28",
+      "group": "Backend",
+      "depends": [8]
+    },
+    {
+      "key": 10,
+      "name": "Concevoir schéma BDD",
+      "start_date": "2025-10-01",
+      "end_date": "2025-10-31",
+      "group": "Base de données",
+      "depends": [1]
+    },
+    {
+      "key": 11,
+      "name": "Implémenter BDD",
+      "start_date": "2025-11-01",
+      "end_date": "2025-11-30",
+      "group": "Base de données",
+      "depends": [10]
+    },
+    {
+      "key": 12,
+      "name": "Tests fonctionnels",
+      "start_date": "2026-03-01",
+      "end_date": "2026-03-15",
+      "group": "Tests & Déploiement",
+      "depends": [5, 9]
+    },
+    {
+      "key": 13,
+      "name": "Tests de sécurité",
+      "start_date": "2026-03-16",
+      "end_date": "2026-03-31",
+      "group": "Tests & Déploiement",
+      "depends": [12]
+    },
+    {
+      "key": 14,
+      "name": "Déploiement",
+      "start_date": "2026-04-01",
+      "end_date": "2026-04-15",
+      "group": "Tests & Déploiement",
+      "depends": [13]
+    }
+  ]
+}

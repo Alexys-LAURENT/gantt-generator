@@ -1,0 +1,211 @@
+{
+  "hero": {
+    "badge": "Free and professional tool",
+    "title": "Gantt Chart",
+    "titleHighlight": "Generator",
+    "subtitle": "Create professional visual schedules in seconds. Manage your projects with dependencies, groups, and export to image.",
+    "features": {
+      "json": {
+        "title": "JSON Configuration",
+        "description": "Simple and intuitive format to define your tasks and their relationships"
+      },
+      "dependencies": {
+        "title": "Visual Dependencies",
+        "description": "Visualize task relationships with colored arrows"
+      },
+      "export": {
+        "title": "Image Export",
+        "description": "Download your diagrams in high quality for your presentations"
+      }
+    }
+  },
+  "tool": {
+    "title": "Get Started Now",
+    "subtitle": "Enter your JSON configuration and generate your Gantt chart in one click",
+    "jsonEditor": {
+      "title": "JSON Configuration",
+      "placeholder": "Enter your JSON here...",
+      "generateButton": "Generate Gantt"
+    },
+    "documentation": {
+      "title": "Data Format",
+      "steps": {
+        "key": {
+          "title": "Unique key",
+          "description": "Unique numeric identifier for each task"
+        },
+        "dates": {
+          "title": "Dates (start_date, end_date)",
+          "description": "ISO 8601 format: YYYY-MM-DD"
+        },
+        "group": {
+          "title": "Group (optional)",
+          "description": "Visually groups related tasks"
+        },
+        "depends": {
+          "title": "Dependencies (optional)",
+          "description": "Array of task keys this task depends on"
+        }
+      }
+    },
+    "ganttDisplay": {
+      "title": "Your Gantt Chart",
+      "exportButton": "Export PNG"
+    },
+    "errors": {
+      "invalidArray": "JSON must be an array of tasks",
+      "invalidJson": "Invalid JSON: ",
+      "exportError": "Error exporting image"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "Gantt Generator",
+      "description": "Free and open-source tool to create professional Gantt charts. Perfect for project management and team planning."
+    },
+    "features": {
+      "title": "Features",
+      "items": {
+        "json": "Simple JSON configuration",
+        "dependencies": "Dependency management",
+        "export": "High-quality export",
+        "interface": "Intuitive interface"
+      }
+    },
+    "tech": {
+      "title": "Technologies"
+    },
+    "copyright": "Gantt Generator. Made with ❤️ by Alexys LAURENT."
+  },
+  "dependencyModes": {
+    "hidden": {
+      "title": "Hidden",
+      "description": "No dependencies shown"
+    },
+    "hover": {
+      "title": "Hover",
+      "description": "Show on mouse hover"
+    },
+    "click": {
+      "title": "Click",
+      "description": "Click to show/hide"
+    },
+    "all": {
+      "title": "All",
+      "description": "All dependencies shown"
+    }
+  },
+  "defaultExample": [
+    {
+      "key": 1,
+      "name": "Requirements Analysis",
+      "start_date": "2025-09-01",
+      "end_date": "2025-09-30",
+      "group": "Planning & Design"
+    },
+    {
+      "key": 2,
+      "name": "UI/UX Mockups",
+      "start_date": "2025-10-01",
+      "end_date": "2025-10-31",
+      "group": "Planning & Design",
+      "depends": [1]
+    },
+    {
+      "key": 3,
+      "name": "Develop Product Pages",
+      "start_date": "2025-11-01",
+      "end_date": "2025-11-30",
+      "group": "Frontend",
+      "depends": [2]
+    },
+    {
+      "key": 4,
+      "name": "Develop Shopping Cart",
+      "start_date": "2025-12-01",
+      "end_date": "2025-12-31",
+      "group": "Frontend",
+      "depends": [3]
+    },
+    {
+      "key": 5,
+      "name": "Develop User Interface",
+      "start_date": "2026-01-01",
+      "end_date": "2026-01-31",
+      "group": "Frontend",
+      "depends": [4]
+    },
+    {
+      "key": 6,
+      "name": "Develop Login Module",
+      "start_date": "2025-10-01",
+      "end_date": "2025-10-31",
+      "group": "Backend",
+      "depends": [1]
+    },
+    {
+      "key": 7,
+      "name": "Develop Product API",
+      "start_date": "2025-12-01",
+      "end_date": "2025-12-31",
+      "group": "Backend",
+      "depends": [6, 11]
+    },
+    {
+      "key": 8,
+      "name": "Develop Payment System",
+      "start_date": "2026-01-01",
+      "end_date": "2026-01-31",
+      "group": "Backend",
+      "depends": [7]
+    },
+    {
+      "key": 9,
+      "name": "Develop Order Management",
+      "start_date": "2026-02-01",
+      "end_date": "2026-02-28",
+      "group": "Backend",
+      "depends": [8]
+    },
+    {
+      "key": 10,
+      "name": "Design Database Schema",
+      "start_date": "2025-10-01",
+      "end_date": "2025-10-31",
+      "group": "Database",
+      "depends": [1]
+    },
+    {
+      "key": 11,
+      "name": "Implement Database",
+      "start_date": "2025-11-01",
+      "end_date": "2025-11-30",
+      "group": "Database",
+      "depends": [10]
+    },
+    {
+      "key": 12,
+      "name": "Functional Testing",
+      "start_date": "2026-03-01",
+      "end_date": "2026-03-15",
+      "group": "Testing & Deployment",
+      "depends": [5, 9]
+    },
+    {
+      "key": 13,
+      "name": "Security Testing",
+      "start_date": "2026-03-16",
+      "end_date": "2026-03-31",
+      "group": "Testing & Deployment",
+      "depends": [12]
+    },
+    {
+      "key": 14,
+      "name": "Deployment",
+      "start_date": "2026-04-01",
+      "end_date": "2026-04-15",
+      "group": "Testing & Deployment",
+      "depends": [13]
+    }
+  ]
+}
